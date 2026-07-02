@@ -1,0 +1,5 @@
+myenvins/
+__pycache__/
+*.pyc
+.env
+model/model.pkl
