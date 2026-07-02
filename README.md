@@ -1,14 +1,14 @@
-# 🏥 Containerized Insurance Premium Prediction Engine
+#  Containerized Insurance Premium Prediction Engine
 
 An end-to-end, production-style machine learning system that classifies health insurance customers into premium risk categories (**Low, Medium, High**). The project covers the full pipeline — EDA, feature engineering, model training/tuning, a FastAPI inference service, a Streamlit dashboard, and Docker containerization for deployment.
 
 **Timeline:** Jan '26 – Feb '26 | Self Project
 
-## 🎯 Objective
+##  Objective
 
 To build an optimized classification pipeline that predicts health insurance premium risk categories (Low, Medium, High) from customer demographic, health, and lifestyle data — and serve it through a containerized, production-ready API and web dashboard.
 
-## ✨ Highlights
+##  Highlights
 
 - **92.64%** test accuracy and **93.20%** 5-fold cross-validation score using an ensemble **Random Forest** classifier, optimized via `RandomizedSearchCV`
 - Engineered domain-specific features — **BMI**, **age group**, **lifestyle risk**, and **city tier** — across a **50,000-row** consumer dataset
@@ -16,7 +16,7 @@ To build an optimized classification pipeline that predicts health insurance pre
 - **Containerized** the full app ecosystem with **Docker** and published a verified image to **Docker Hub**
 - Built an interactive **Streamlit** dashboard that communicates natively with the Dockerized FastAPI backend
 
-## 🧠 Machine Learning Pipeline
+##  Machine Learning Pipeline
 
 ### 1. Data & EDA
 - Source dataset: `insurance_50k-1.csv` (50,000 rows) with fields including age, weight, height, income, smoking status, occupation, and city
@@ -42,7 +42,7 @@ Final model features: `bmi`, `age_group`, `lifestyle_risk`, `city_tier`, `income
 - Evaluation via accuracy score, classification report, confusion matrix, and 10-fold cross-validation
 - Final pipeline (preprocessing + trained model) serialized with `pickle` as `model.pkl`
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 User → Streamlit Dashboard (frontend.py) → FastAPI Backend (app.py) → ML Pipeline (model.pkl) → Prediction
@@ -53,7 +53,7 @@ User → Streamlit Dashboard (frontend.py) → FastAPI Backend (app.py) → ML P
 - **Model layer:** `predict.py` loads `model.pkl` and exposes a `predict_output` function used by the API
 - **Containerization:** Both services run inside Docker, communicating over the container network
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Insurance-Premium-Prediction/
@@ -74,7 +74,7 @@ Insurance-Premium-Prediction/
 └── README.md
 ```
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - **Language:** Python 3.13
 - **ML:** scikit-learn (RandomForestClassifier, Pipeline, ColumnTransformer, RandomizedSearchCV)
@@ -84,7 +84,7 @@ Insurance-Premium-Prediction/
 - **Frontend:** Streamlit
 - **Deployment:** Docker, Docker Hub
 
-## 🔌 API Reference
+##  API Reference
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -120,7 +120,7 @@ Insurance-Premium-Prediction/
 }
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Run locally
 
@@ -150,19 +150,19 @@ docker pull <your-dockerhub-username>/insurance-premium-predictor
 docker run -p 8000:8000 <your-dockerhub-username>/insurance-premium-predictor
 ```
 
-## 📊 Results
+##  Results
 
 - **Test Accuracy:** 92.64%
 - **5-Fold Cross-Validation Score:** 93.20%
 - Full classification report and confusion matrix available in `Insurance_pred.ipynb`
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 - Add model monitoring/versioning (e.g., MLflow)
 - CI/CD pipeline for automated testing and Docker image publishing
 - Expand feature set with additional health/lifestyle indicators
 - Deploy to a cloud platform (AWS/GCP/Azure) with autoscaling
 
-## 📄 License
 
-Add your preferred license here (e.g., MIT).
+
+
